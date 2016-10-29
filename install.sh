@@ -5,8 +5,9 @@ if [[ "${PWD}" != "/tmp/manjaro-setup" ]]; then
 	exit 1
 fi
 
-~/scripts/install/sudo.sh
-~/scripts/install/bashrc.sh
+./sudo.sh
+./bashrc.sh
 source ~/.bashrc
-~/scripts/install/go.sh
-~/scripts/install/vim.sh
+./go.sh
+./vim.sh
+./virtualbox.sh
