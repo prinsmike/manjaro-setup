@@ -10,4 +10,3 @@ fi
 source ~/.bashrc
 ./go.sh
 ./vim.sh
-./virtualbox.sh

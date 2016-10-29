@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo pacman --noconfirm -S virtualbox
+sudo pacman -S virtualbox
