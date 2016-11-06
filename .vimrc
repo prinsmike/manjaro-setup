@@ -63,6 +63,7 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
