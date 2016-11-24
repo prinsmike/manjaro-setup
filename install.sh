@@ -8,5 +8,6 @@ fi
 ./sudo.sh
 ./bashrc.sh
 source ~/.bashrc
+./util.sh
 ./go.sh
 ./vim.sh
