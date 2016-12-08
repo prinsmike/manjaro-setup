@@ -9,5 +9,6 @@ fi
 ./bashrc.sh
 source ~/.bashrc
 ./util.sh
+./git.sh
 ./go.sh
 ./vim.sh
