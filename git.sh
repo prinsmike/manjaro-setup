@@ -8,3 +8,4 @@ read gitemail
 
 git config --global user.name $gitname
 git config --global user.email $gitemail
+git config --global credential.helper 'cache --timeout=43200'
