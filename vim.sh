@@ -21,7 +21,7 @@ git clone --depth 1 https://github.com/Valloric/YouCompleteMe.git \
 	cd ~/.vim/bundle/YouCompleteMe && \
 	pwd && \
 	git submodule update --init --recursive && \
-	~/.vim/bundle/YouCompleteMe/install.py --gocode-completer && \
+	~/.vim/bundle/YouCompleteMe/install.py --clang-completer && \
 	echo "Changing back to /tmp/manjaro-setup." && \
 	cd /tmp/manjaro-setup && \
 	pwd
