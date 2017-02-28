@@ -12,3 +12,4 @@ source ~/.bashrc
 ./git.sh
 ./go.sh
 ./vim.sh
+./printers.sh
