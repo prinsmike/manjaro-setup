@@ -11,5 +11,6 @@ source ~/.bashrc
 ./util.sh
 ./git.sh
 ./go.sh
+./ruby.sh
 ./vim.sh
 ./printers.sh
