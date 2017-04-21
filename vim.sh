@@ -7,7 +7,7 @@ fi
 
 mkdir -p ~/.vim/bundle ~/.vim/colors
 
-sudo pacman --noconfirm -S vim ctags
+sudo pacman --noconfirm -S vim clang ctags
 
 sudo /bin/sh -c 'echo "export EDITOR=vim" >> /etc/profile.d/env.sh'
 
@@ -29,3 +29,7 @@ git clone --depth 1 https://github.com/Valloric/YouCompleteMe.git \
 # Install Vundle and plugins
 git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle && \
 	vim +PluginInstall +qall!
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+cd -
