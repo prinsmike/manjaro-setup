@@ -313,3 +313,6 @@ silent! source ./.vimrc.local
 set rtp+=~/.vim/after/
 
 set foldmethod=marker
+
+" Darker color for whitespace indicators.
+hi SpecialKey ctermfg=16
