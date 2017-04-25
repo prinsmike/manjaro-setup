@@ -150,7 +150,7 @@ let g:session_autoload = 1
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$']
-let g:NERDTreeWinSize = 35
+let g:NERDTreeWinSize = 30
 
 " Make sure that shen NERDTree root is changed, Vim's pwd is also updated.
 let g:NERDTreeChDirMode = 2
