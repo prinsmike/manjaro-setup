@@ -111,7 +111,7 @@ set shiftwidth=4
 set autoindent
 
 " Replace trailing whitespace and tabs with unicode characters.
-exec "set listchars=tab:\uBB\uBB,trail:\u2716,nbsp:~"
+set listchars=tab:\¦\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set list
 
 " Enable syntax highlighting
@@ -314,5 +314,3 @@ set rtp+=~/.vim/after/
 
 set foldmethod=marker
 
-" Darker color for whitespace indicators.
-hi SpecialKey ctermfg=16
