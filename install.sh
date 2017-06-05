@@ -10,6 +10,7 @@ fi
 source ~/.bashrc
 ./util.sh
 ./git.sh
+./docker.sh
 ./go.sh
 ./ruby.sh
 ./vim.sh
