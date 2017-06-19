@@ -1,4 +1,3 @@
-set shell=bash\ --login
 
 set nocompatible
 filetype off
@@ -246,6 +245,14 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Quick window resizing.
+map <C-[> <C-w><
+map <C-]> <C-w>>
+map Om <C-w>-
+map Ok <C-w>+
+map Oo <C-w><
+map Oj <C-w>>
 
 nmap <C-Up> :tabnew<CR>
 nmap <C-Down> :tabclose<CR>
