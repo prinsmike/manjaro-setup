@@ -1,0 +1,9 @@
+[Unit]
+Description=Check the battery every five minutes
+
+[Timer]
+OnBootSec=5min
+OnCalendar=*:0/5
+
+[Install]
+WantedBy=basic.target

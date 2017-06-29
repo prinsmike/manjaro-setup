@@ -1,0 +1,6 @@
+[Unit]
+Description=Battery monitor with notifications for my ASUS laptop
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/battmon

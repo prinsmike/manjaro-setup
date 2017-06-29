@@ -17,3 +17,4 @@ source ~/.bashrc
 ./thunar.sh
 ./office.sh
 ./printers.sh
+./install-battmon.sh
