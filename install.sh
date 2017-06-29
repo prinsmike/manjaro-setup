@@ -14,5 +14,6 @@ source ~/.bashrc
 ./go.sh
 ./ruby.sh
 ./vim.sh
+./thunar.sh
 ./office.sh
 ./printers.sh
