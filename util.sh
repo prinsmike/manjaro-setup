@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # iostat
-sudo pacman -S sysstat htop lsof iotop zip
+sudo pacman -S sysstat htop lsof iotop zip unzip
