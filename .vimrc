@@ -249,15 +249,24 @@ map <C-l> <C-w>l
 " Quick window resizing.
 map <C-[> <C-w><
 map <C-]> <C-w>>
+
+" Settings for urxvt.
+" Use <C-/> and <C-*> for left/right resizing.
+" Use <C--> and <C-+> for up/down resizing.
 map Om <C-w>-
 map Ok <C-w>+
 map Oo <C-w><
 map Oj <C-w>>
 
-nmap <C-Up> :tabnew<CR>
-nmap <C-Down> :tabclose<CR>
-nmap <C-Left> :tabprevious<CR>
-nmap <C-Right> :tabnext<CR>
+" Settings for urxvt.
+nmap Od :tabprevious<CR>
+nmap Oc :tabnext<CR>
+
+" Settings for xterm.
+"nmap <C-Up> :tabnew<CR>
+"nmap <C-Down> :tabclose<CR>
+"nmap <C-Left> :tabprevious<CR>
+"nmap <C-Right> :tabnext<CR>
 
 " Space folds and unfolds.
 nnoremap <Space> za
