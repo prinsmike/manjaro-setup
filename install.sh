@@ -18,3 +18,4 @@ source ~/.bashrc
 ./office.sh
 ./printers.sh
 ./install-battmon.sh
+./x.sh
