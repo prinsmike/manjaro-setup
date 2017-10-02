@@ -12,10 +12,8 @@ source ~/.bashrc
 ./git.sh
 ./docker.sh
 ./go.sh
-./ruby.sh
 ./vim.sh
 ./thunar.sh
 ./office.sh
 ./printers.sh
 ./install-battmon.sh
-./x.sh
