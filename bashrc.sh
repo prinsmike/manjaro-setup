@@ -10,6 +10,8 @@ echo 'alias f="df -h"' >> ~/.bashrc
 echo 'alias cf="clear && df -h"' >> ~/.bashrc
 echo 'alias du1="du -hd1"' >> ~/.bashrc
 echo 'alias du0="du -hd0"' >> ~/.bashrc
+echo 'alias dt="date +%Y%m%d"' >> ~/.bashrc
+echo 'alias dtt="date +%Y%m%d.%H%M"' >> ~/.bashrc
 
 echo >> ~/.bashrc
 echo '# User' >> ~/.bashrc
