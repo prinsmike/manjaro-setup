@@ -22,5 +22,6 @@ source ~/.bashrc
 ./book.sh
 ./thunar.sh
 ./virtualbox.sh
+./weechat.sh
 ./palemoon.sh
 ./install-battmon.sh
