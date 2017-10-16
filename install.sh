@@ -13,7 +13,14 @@ source ~/.bashrc
 ./docker.sh
 ./go.sh
 ./vim.sh
+./vs-code.sh
 ./thunar.sh
+./graphics
 ./office.sh
 ./printers.sh
+./audio.sh
+./book.sh
+./thunar.sh
+./virtualbox.sh
+./palemoon.sh
 ./install-battmon.sh

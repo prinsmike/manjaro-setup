@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # iostat
-sudo pacman -S sysstat htop lsof iotop zip unzip bash-completion thunar
+sudo pacman -S sysstat htop lsof iotop zip unzip bash-completion
 
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 
