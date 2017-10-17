@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir -p ~/.vim/bundle ~/.vim/colors
+mkdir -p ~/.vim/tmp
 
 sudo pacman --noconfirm -S vim clang ctags yaourt
 
