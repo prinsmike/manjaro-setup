@@ -19,7 +19,8 @@ echo 'alias put="etcd-env put"' >> ~/.bashrc
 echo 'alias get="etcd-env get"' >> ~/.bashrc
 echo 'alias del="etcd-env del"' >> ~/.bashrc
 echo 'alias keys="etcd-env keys"' >> ~/.bashrc
-echo 'alias keys="etcd-env all"' >> ~/.bashrc
+echo 'alias all="etcd-env all"' >> ~/.bashrc
+echo 'alias tsc="docker run --rm -it --volume \$(pwd):/app sandrokeil/typescript tsc"'
 
 echo >> ~/.bashrc
 echo '# User' >> ~/.bashrc
