@@ -2,4 +2,6 @@
 
 sudo pacman --noconfirm -S evince calibre pandoc
 
-sed -i 's/qpdfview/evince/g' ~/.config/mimeapps.list
+yaourt --noconfirm -S acroread
+
+sed -i 's/epdfview/acroread/g' ~/.config/mimeapps.list
