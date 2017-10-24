@@ -64,6 +64,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'isobit/vim-caddyfile'
 
 call vundle#end()
 filetype plugin indent on
