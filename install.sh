@@ -25,3 +25,4 @@ source ~/.bashrc
 ./weechat.sh
 ./palemoon.sh
 ./install-battmon.sh
+./snap.sh
