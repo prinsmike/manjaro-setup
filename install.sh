@@ -8,6 +8,7 @@ fi
 ./sudo.sh
 ./bashrc.sh
 source ~/.bashrc
+./flatpak.sh
 ./util.sh
 ./git.sh
 ./docker.sh
@@ -25,4 +26,3 @@ source ~/.bashrc
 ./weechat.sh
 ./palemoon.sh
 ./install-battmon.sh
-./snap.sh
