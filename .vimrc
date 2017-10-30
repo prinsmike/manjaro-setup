@@ -335,3 +335,8 @@ set foldmethod=marker
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType docker-compose setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+
+
+" Syntax highlighting
+au BufRead,BufNewFile *.cdy set filetype=caddyfile
+
