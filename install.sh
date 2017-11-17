@@ -22,6 +22,7 @@ source ~/.bashrc
 ./audio.sh
 ./book.sh
 ./thunar.sh
+./postman.sh
 ./virtualbox.sh
 ./weechat.sh
 ./palemoon.sh
