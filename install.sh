@@ -12,6 +12,7 @@ source ~/.bashrc
 ./util.sh
 ./git.sh
 ./docker.sh
+./virtualbox.sh
 ./go.sh
 ./vim.sh
 ./vs-code.sh

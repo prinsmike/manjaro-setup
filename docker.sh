@@ -6,3 +6,5 @@ sudo pacman --noconfirm -S docker && \
 sudo systemctl enable docker.service && \
 	sudo systemctl start docker.service
 
+yaourt --noconfirm -S kubectl-bin minikube
+
