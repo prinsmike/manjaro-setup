@@ -8,6 +8,7 @@ fi
 ./sudo.sh
 ./bashrc.sh
 source ~/.bashrc
+./dev.sh
 ./flatpak.sh
 ./util.sh
 ./git.sh

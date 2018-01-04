@@ -1,21 +1,43 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-# vim
+# Clean up in case we're re-installing.
+rm -rf ~/.config/nvim
+sudo rm -f /etc/profile.d/env.sh
 
-mkdir -p ~/.vim/bundle ~/.vim/colors
-mkdir -p ~/.vim/tmp
+mkdir -p ~/.config/nvim/colors
+mkdir -p ~/.config/nvim/tmp
 
-sudo pacman --noconfirm -S vim clang ctags yaourt
+if [[ ! -f "/etc/profile.d/env.sh" ]]; then
+	sudo touch /etc/profile.d/env.sh
+fi
 
 sudo /bin/sh -c 'echo "export EDITOR=vim" >> /etc/profile.d/env.sh'
+sudo /bin/sh -c 'echo "export VISUAL=vim" >> /etc/profile.d/env.sh'
 
-cp ./.vimrc ~/.vimrc
-cp ./molokai.vim ~/.vim/colors
+# Install nvim config.
+if [[ ! -d "~/.config/nvim" ]]; then
+	mkdir -p ~/.config/nvim
+fi
+cp ./nvim/init.vim ~/.config/nvim/init.vim
 
-# Install Vundle and plugins
-git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle && \
-	vim +PluginInstall +qall!
+# Color scheme.
+cp ./molokai.vim ~/.config/nvim/colors/
 
-# neovim
+# Install neovim with python plugins.
+sudo pacman --noconfirm -S neovim python2-neovim python-neovim
 
-sudo pacman --noconfirm -S neovim
+# Install gocode
+go get -u github.com/nsf/gocode
+
+# Install Plug
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install plugins.
+nvim +PlugInstall +qall!
+
+# Install deoplete.
+nvim +UpdateRemotePlugins +qall!
+
+# Install Go tools
+nvim +GoInstallBinaries +qall!

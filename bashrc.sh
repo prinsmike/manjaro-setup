@@ -2,6 +2,9 @@
 
 echo >> ~/.bashrc
 echo '# Aliases' >> ~/.bashrc
+echo
+echo 'alias vim="nvim"'
+echo
 echo 'alias lh="ls -lh"' >> ~/.bashrc
 echo 'alias la="ls -lha"' >> ~/.bashrc
 echo 'alias lhn="ls -lhn"' >> ~/.bashrc
