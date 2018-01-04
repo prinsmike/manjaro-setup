@@ -340,3 +340,6 @@ autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 " Syntax highlighting
 au BufRead,BufNewFile *.cdy set filetype=caddyfile
 
+
+set ttimeoutlen=50
+let g:ftplugin_sql_omni_key = '<C-j>'
