@@ -60,7 +60,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'isobit/vim-caddyfilea'
+Plug 'isobit/vim-caddyfile'
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 call plug#end()
