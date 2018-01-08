@@ -62,6 +62,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'isobit/vim-caddyfilea'
 Plug 'Yggdroot/indentLine'
+Plug 'elzr/vim-json'
 call plug#end()
 
 filetype plugin indent on
@@ -342,3 +343,9 @@ au BufRead,BufNewFile *.dockerfile set filetype=Dockerfile
 
 set ttimeoutlen=50
 let g:ftplugin_sql_omni_key = '<C-j>'
+
+" Disable indentLine for json files.
+" indentLine hides double quotes in json files.
+
+autocmd FileType json let g:indentLine_enabled = 0
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
