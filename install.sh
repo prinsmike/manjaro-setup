@@ -5,6 +5,7 @@ if [[ "${PWD}" != "/tmp/manjaro-setup" ]]; then
 	exit 1
 fi
 
+./first.sh
 ./sudo.sh
 ./bashrc.sh
 source ~/.bashrc

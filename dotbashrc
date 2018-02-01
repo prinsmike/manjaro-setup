@@ -1,0 +1,127 @@
+#
+# ~/.bashrc
+#
+
+[[ $- != *i* ]] && return
+
+colors() {
+	local fgc bgc vals seq0
+
+	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+
+	# foreground colors
+	for fgc in {30..37}; do
+		# background colors
+		for bgc in {40..47}; do
+			fgc=${fgc#37} # white
+			bgc=${bgc#40} # black
+
+			vals="${fgc:+$fgc;}${bgc}"
+			vals=${vals%%;}
+
+			seq0="${vals:+\e[${vals}m}"
+			printf "  %-9s" "${seq0:-(default)}"
+			printf " ${seq0}TEXT\e[m"
+			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+		done
+		echo; echo
+	done
+}
+
+
+[[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
+
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
+# Environment variables
+export GOPATH=~/go
+export PATH=$PATH:~/bin:$GOPATH/bin:~/.cargo/bin
+
+# Aliases
+
+alias vim="nvim"
+
+alias lh="ls -lh"
+alias la="ls -lha"
+alias lhn="ls -lhn"
+alias cl="clear"
+alias f="df -h"
+alias cf="clear && df -h"
+alias du1="du -hd1"
+alias du0="du -hd0"
+alias dt="date +%Y%m%d"
+alias dtt="date +%Y%m%d.%H%M"
+
+# etcd
+
+alias e="etcd-env"
+alias put="etcd-env put"
+alias get="etcd-env get"
+alias del="etcd-env del"
+alias keys="etcd-env keys"
+alias all="etcd-env all"
+
+# Interpreters, compilers, and source control
+
+## Go
+alias goalpine="docker run --rm -u=\$UID:\$(id -g \$USER) -v \$GOPATH:\$HOME/go -w \$(pwd) -e GOPATH=$GOPATH golang:alpine go"
+
+## Git
+alias gitv="git tag | sort --version-sort"
+
+## ocaml
+alias ocaml="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocaml"
+alias ocamlc="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlc"
+alias ocamlopt="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlopt"
+alias ocamlfind="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlfind"
+alias ocamlsh="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam bash"
+
+
+## PHP
+alias php="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:7-cli php"
+alias php5="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:5-cli php"
+
+## Javscript
+alias node="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript node"
+alias npm="docker run -it --rm -u=\$UID:\$(id -g \$USER) -p 8080:8080 --volume \$(pwd):/app prinsmike/docker-typescript npm"
+alias tsc="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript tsc"
+alias gulp="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript gulp"
+alias webpack="docker run -it --rm -u=\$UID:\$(id -g \$USER) -p 8080:8080 -v \$(pwd):/app prinsmike/docker-typescript webpack"
+alias create-react-app="docker run --rm -u=\$UID:\$(id -g \$USER) -v \$(pwd):/app prinsmike/docker-typescript create-react-app"
+alias yarn="docker run --rm -u=\$UID:\$(id -g \$USER) -p 3000:3000 -v \$(pwd):/app prinsmike/docker-typescript yarn"
+alias sass="docker run --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
+
+# DevOps
+
+## CI/CD
+alias jenkins-neovim="docker run -it --rm --name jenkins-neovim -v jenkins_jenkins-resources:/resources -w /resources/liquibase-changelogs prinsmike/neovim"
+alias jenkins-neovim-sh="docker run -it --rm --name jenkins-neovim-sh -v jenkins_jenkins-resources:/resources -w /resources/liquibase-changelogs prinsmike/neovim-sh"
+
+## Databases
+
+### Postgres
+alias pg="docker exec -it postgres psql"
+
+### MySQL
+alias mysql="docker exec -it mysql mysql -uroot -pblonkit1"
+
+# User
+
+PS1="\[\033[38;5;40;1m\][\u@\h\[\033[01;37m\] \W\[\033[38;5;40;1m\]]\$\[\033[00m\] "
+
+# Functions
+
+goto() {
+	if [[ -z "$1" ]]; then
+		echo "Where to?"
+		echo
+		echo "Usage: goto ENV_KEY [/sub/path]"
+		echo 'run "keys" for a list of all keys.'
+		return
+	fi
+
+	cd $(etcd-env get $1)$2
+}
