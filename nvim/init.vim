@@ -332,7 +332,7 @@ set rtp+=~/.local/share/nvim/after/
 
 set foldmethod=marker
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType docker-compose setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 
@@ -345,7 +345,7 @@ set ttimeoutlen=50
 let g:ftplugin_sql_omni_key = '<C-j>'
 
 " Disable indentLine for json files.
-" indentLine hides double quotes in json files.
 autocmd FileType json set conceallevel=0
 autocmd FileType json let g:indentLine_enabled = 0
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+
