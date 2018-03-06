@@ -83,6 +83,7 @@ alias ocamlsh="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -
 ## PHP
 alias php="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:7-cli php"
 alias php5="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:5-cli php"
+alias composer="docker run -it --rm -v \$(pwd):/app -u \$(id -u):\$(id -g) composer"
 
 ## Javscript
 alias node="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript node"
@@ -107,6 +108,7 @@ alias pg="docker exec -it postgres psql"
 
 ### MySQL
 alias mysql="docker exec -it mysql mysql -uroot -pblonkit1"
+alias mysqlsh="docker exec -it mysql /bin/bash"
 
 # User
 
