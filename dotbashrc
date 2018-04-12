@@ -38,7 +38,7 @@ colors() {
 
 # Environment variables
 export GOPATH=~/go
-export PATH=$PATH:~/bin:$GOPATH/bin:~/.cargo/bin
+export PATH=$PATH:~/bin:$GOPATH/bin:~/.cargo/bin:~/flutter/bin
 
 # Aliases
 
