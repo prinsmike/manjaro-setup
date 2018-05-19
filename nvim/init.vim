@@ -349,3 +349,9 @@ autocmd FileType json set conceallevel=0
 autocmd FileType json let g:indentLine_enabled = 0
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 
+nmap <silent> <leader>s :set spell!<CR>
+augroup enableSpell
+	autocmd!
+	autocmd FileType markdown setlocal spell
+	autocmd BufRead,BufNewFile *.txt setlocal spell
+augroup END
