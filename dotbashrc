@@ -40,81 +40,14 @@ colors() {
 export GOPATH=~/go
 export PATH=$PATH:~/bin:$GOPATH/bin:~/.cargo/bin:~/flutter/bin
 
-# Aliases
-
-alias vim="nvim"
-
-alias lh="ls -lh"
-alias la="ls -lha"
-alias lhn="ls -lhn"
-alias cl="clear"
-alias f="df -h"
-alias cf="clear && df -h"
-alias du1="du -hd1"
-alias du0="du -hd0"
-alias dt="date +%Y%m%d"
-alias dtt="date +%Y%m%d.%H%M"
-
-# etcd
-
-alias e="etcd-env"
-alias put="etcd-env put"
-alias get="etcd-env get"
-alias del="etcd-env del"
-alias keys="etcd-env keys"
-alias all="etcd-env all"
-
-# Interpreters, compilers, and source control
-
-## Go
-alias goalpine="docker run --rm -u=\$UID:\$(id -g \$USER) -v \$GOPATH:\$HOME/go -w \$(pwd) -e GOPATH=$GOPATH golang:alpine go"
-
-## Git
-alias gitv="git tag | sort --version-sort"
-
-## ocaml
-alias ocaml="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocaml"
-alias ocamlc="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlc"
-alias ocamlopt="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlopt"
-alias ocamlfind="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam ocamlfind"
-alias ocamlsh="docker run -it --rm --name ocaml -v ~/src/ocaml:/home/ocaml/src -w /home/ocaml/src ocaml/opam bash"
-
-
-## PHP
-alias php="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:7-cli php"
-alias phpsh="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:7-cli /bin/bash"
-alias php5="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:5-cli php"
-alias php5sh="docker run -it --rm -v \$(pwd):/usr/src/script -w /usr/src/script php:5-cli php /bin/bash"
-alias composer="docker run -it --rm -v \$(pwd):/app -u \$(id -u):\$(id -g) composer"
-
-## Javscript
-alias node="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript node"
-alias npm="docker run -it --rm -u=\$UID:\$(id -g \$USER) -p 8080:8080 --volume \$(pwd):/app prinsmike/docker-typescript npm"
-alias tsc="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript tsc"
-alias gulp="docker run --rm -u=\$UID:\$(id -g \$USER) --volume \$(pwd):/app prinsmike/docker-typescript gulp"
-alias webpack="docker run -it --rm -u=\$UID:\$(id -g \$USER) -p 8080:8080 -v \$(pwd):/app prinsmike/docker-typescript webpack"
-alias create-react-app="docker run --rm -u=\$UID:\$(id -g \$USER) -v \$(pwd):/app prinsmike/docker-typescript create-react-app"
-alias yarn="docker run --rm -u=\$UID:\$(id -g \$USER) -p 3000:3000 -v \$(pwd):/app prinsmike/docker-typescript yarn"
-alias sass="docker run --rm -v \$(pwd):\$(pwd) -w \$(pwd) jbergknoff/sass"
-
-# DevOps
-
-## CI/CD
-alias jenkins-neovim="docker run -it --rm --name jenkins-neovim -v jenkins_jenkins-resources:/resources -w /resources/liquibase-changelogs prinsmike/neovim"
-alias jenkins-neovim-sh="docker run -it --rm --name jenkins-neovim-sh -v jenkins_jenkins-resources:/resources -w /resources/liquibase-changelogs prinsmike/neovim-sh"
-
-## Databases
-
-### Postgres
-alias pg="docker exec -it postgres psql"
-
-### MySQL
-alias mysql="docker exec -it mysql mysql -uroot -pblonkit1"
-alias mysqlsh="docker exec -it mysql /bin/bash"
-
 # User
 
-PS1="\[\033[38;5;40;1m\][\u@\h\[\033[01;37m\] \W\[\033[38;5;40;1m\]]\$\[\033[00m\] "
+#PS1="\[\033[38;5;40;1m\][\u@\h\[\033[01;37m\] \W\[\033[38;5;40;1m\]]\$\[\033[00m\] "
+PS1="\[\033[01;37m\]\W\[\033[38;5;40;1m\] \$\[\033[00m\] "
+
+test -f ~/.aliases && ~/.aliases
+test -f ~/.dpbashrc && ~/.dpbashrc
+
 
 # Functions
 
