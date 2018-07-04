@@ -63,6 +63,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'isobit/vim-caddyfile'
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 filetype plugin indent on
