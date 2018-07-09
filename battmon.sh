@@ -12,8 +12,6 @@ DISCHARGING=$(printf "Battery discharging: %s%%\nRemaining: %s" "$BATTPERC" "$BA
 CHARGING=$(printf "Battery charging: %s%%\nRemaining: %s" "$BATTPERC" "$BATTTIME")
 
 
-if [[ `echo $BATTINFO | grep Discharging` && $BATTPERC < 22 ]]; then
+if [[ `echo $BATTINFO | grep Discharging` && $BATTPERC < 45 ]]; then
 	/usr/bin/notify-send -u critical -t 600000 -i battery-low "$DISCHARGING"
-elif [[ `echo $BATTINFO | grep Charging` && $BATTPERC > 78 ]]; then
-	/usr/bin/notify-send -u critical -t 600000 -i battery-full "$CHARGING"
 fi
