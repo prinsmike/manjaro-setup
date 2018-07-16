@@ -10,10 +10,11 @@ fi
 ./bashrc.sh
 source ~/.bashrc
 ./dev.sh
-./flatpak.sh
+#./flatpak.sh
 ./util.sh
 ./git.sh
 ./docker.sh
+./kvm.sh
 ./virtualbox.sh
 ./go.sh
 ./vim.sh
@@ -26,7 +27,6 @@ source ~/.bashrc
 ./book.sh
 ./thunar.sh
 ./postman.sh
-./virtualbox.sh
 ./weechat.sh
 ./palemoon.sh
 ./install-battmon.sh
