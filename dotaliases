@@ -1,5 +1,6 @@
 # Aliases
 
+alias ssh="TERM=linux ssh"
 alias vim="nvim"
 
 alias lh="ls -lh"
