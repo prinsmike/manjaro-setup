@@ -1,6 +1,8 @@
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,url-select,keyboard-select
 URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
 URxvt.matcher.button: 1
+
 
 !*background:                      #272827
 !*foreground:                      #657b83
