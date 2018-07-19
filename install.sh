@@ -9,6 +9,7 @@ fi
 ./sudo.sh
 ./bashrc.sh
 source ~/.bashrc
+./Xrecources.sh
 ./dev.sh
 #./flatpak.sh
 ./util.sh

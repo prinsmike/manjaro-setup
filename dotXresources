@@ -15,10 +15,10 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #111111
+!XTerm*background: #111111
 !XTerm*foreground: #e7e7e7
 XTerm*pointerColor: #16A085
 !XTerm*faceName: Fixed
 XTerm*faceSize: 11
 
-URxvt.background: #2b2b2b
+!URxvt.background: #2b2b2b
