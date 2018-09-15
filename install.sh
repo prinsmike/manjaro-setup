@@ -15,7 +15,7 @@ source ~/.bashrc
 ./util.sh
 ./git.sh
 ./docker.sh
-./kvm.sh
+#./kvm.sh
 ./virtualbox.sh
 ./go.sh
 ./vim.sh
@@ -30,4 +30,5 @@ source ~/.bashrc
 ./postman.sh
 ./weechat.sh
 ./palemoon.sh
-./install-battmon.sh
+./i3/install.sh
+./i3status/install.sh
