@@ -3,6 +3,7 @@
 alias ssh="TERM=linux ssh"
 alias vim="nvim"
 
+alias ls="ls --color"
 alias lh="ls -lh"
 alias la="ls -lha"
 alias lhn="ls -lhn"
