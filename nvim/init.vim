@@ -356,3 +356,6 @@ augroup enableSpell
 	autocmd FileType markdown setlocal spell
 	autocmd BufRead,BufNewFile *.txt setlocal spell
 augroup END
+
+nnoremap th :tabprev<CR>
+nnoremap tl :tabnext<CR>
